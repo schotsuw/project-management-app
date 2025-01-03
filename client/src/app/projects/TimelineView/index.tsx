@@ -66,12 +66,12 @@ const Timeline = ({id, setIsModalNewTaskOpen}: Props) => {
                 {...displayOptions}
                 columnWidth={displayOptions.viewMode === ViewMode.Month ? 150 : 100}
                 listCellWidth='100px'
-                barBackgroundColor={isDarkMode ? "#101214" : "#aeb8c2"}
+                barBackgroundColor={isDarkMode ? "#681e87" : "#c763f2"}
                 barBackgroundSelectedColor={isDarkMode ? "#000" : "#9ba1a6"}
                 />
         </div>
         <div className='px-4 pb-5 pt-1'>
-            <button className='flex items-center rounded bg-blue-primary px-3 py-2 text-white hover:bg-blue-600'
+            <button className='flex items-center rounded bg-purple-600 px-3 py-2 text-white hover:bg-purple-700'
             onClick={() => setIsModalNewTaskOpen(true)}>
                 Add new task
             </button>

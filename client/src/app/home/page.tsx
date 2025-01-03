@@ -19,7 +19,7 @@ import {
     XAxis,
     YAxis,
   } from "recharts";
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+const COLORS = ["#c642ff", "#00C49F", "#FFBB28", "#FF8042"];
 
 const HomePage = () => {
     //fix to show the specific projectID
@@ -71,13 +71,13 @@ const HomePage = () => {
 
     const chartColors = isDarkMode
     ? {
-        bar: "#8884d8",
+        bar: "#b984d8",
         barGrid: "#303030",
         pieFill: "#4A90E2",
         text: "#FFFFFF",
       }
     : {
-        bar: "#8884d8",
+        bar: "#b984d8",
         barGrid: "#E0E0E0",
         pieFill: "#82ca9d",
         text: "#000000",
@@ -142,7 +142,15 @@ const HomePage = () => {
                   getRowClassName={() => "data-grid-row"}
                   getCellClassName={() => "data-grid-cell"}
                   className={dataGridClassNames}
-                  sx={dataGridSxStyles(isDarkMode)}
+                  sx={{
+                    ...dataGridSxStyles(isDarkMode),
+                    '& .MuiCheckbox-root.Mui-checked': {
+                      color: '#b984d8',
+                    },
+                    '& .MuiCheckbox-root.Mui-checked:hover': {
+                      backgroundColor: 'rgba(185, 132, 216, 0.04)',
+                    },
+                  }}
                 />
               </div>
             </div>

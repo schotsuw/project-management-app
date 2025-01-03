@@ -62,15 +62,15 @@ const TaskColumn = ({status, tasks, moveTask, setIsModalNewTaskOpen }: TaskColum
   const taskCount = tasks.filter((task) => task.status === status).length;
 
   const statusColor: any = {
-    "To Do": "#2563EB",
-    "Work In Progress": "#059669",
-    "Under Review": "#D97706",
+    "To Do": "#8f25eb",
+    "Work In Progress": "#26cf23",
+    "Under Review": "#f0953a",
     Completed: "#000000",
   };
 
   
   return (
-    <div ref={(instance) => {drop(instance)}} className={`sl:py-4 rounded-lg py-2 xl:px-2 ${isOver ? "bg-blue-100 dark:bg-neutral-950" : ""}`}>
+    <div ref={(instance) => {drop(instance)}} className={`sl:py-4 rounded-lg py-2 xl:px-2 ${isOver ? "bg-purple-100 dark:bg-neutral-950" : ""}`}>
       <div className='mb-3 flex w-full'>
         <div className={`w-2 !bg-[${statusColor[status]}] rounded-s-lg`}
         style={{ backgroundColor: statusColor[status]}}></div>
@@ -86,7 +86,7 @@ const TaskColumn = ({status, tasks, moveTask, setIsModalNewTaskOpen }: TaskColum
             <button className='flex h-6 w-5 items-center justify-center dark:bg-neutral-500'>
               <EllipsisVertical size={26}/>
             </button>
-            <button className='flex h-6 w-6 items-center justify-center rounded bg-gray-200 dark:bg-dark-tertiary dark:text-white'
+            <button className='flex h-6 w-6 items-center justify-center rounded bg-purple-100 dark:bg-dark-tertiary dark:text-white hover:bg-purple-200'
                     onClick={() => setIsModalNewTaskOpen(true)}>
               <Plus size={16}/>
             </button>
@@ -131,7 +131,7 @@ const Task = ({ task }: TaskProps) => {
           : priority === "Medium"
             ? "bg-green-200 text-green-700"
             :priority === "Low"
-              ? "bg-blue-200 text-blue-700"
+              ? "bg-purple-200 text-purple-700"
                 : "bg-gray-200 text-gray-700"
     }`}>
       {priority}
@@ -156,7 +156,7 @@ const Task = ({ task }: TaskProps) => {
                 {task.priority && <Prioritytag priority={task.priority}/>}
                 <div className='flex gap-2'>
                   {taskTagsSplit.map((tag) => (
-                  <div key={tag} className='rounded-full bg-blue-100 px-2 py-1 text-xs'>
+                  <div key={tag} className='rounded-full bg-purple-100 px-2 py-1 text-xs'>
                     {" "}
                     {tag}
                   </div>
