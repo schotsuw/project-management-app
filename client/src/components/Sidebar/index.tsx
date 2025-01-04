@@ -65,7 +65,7 @@ const Sidebar = () => {
             className='border border-gray-200 dark:border-gray-700 rounded-lg'
           />
           <div>
-            <h3 className='text-md font-bold tracking-wide dark:text-gray-200'>SARAN TEAM</h3>
+            <h3 className='text-md font-bold tracking-wide dark:text-gray-200'>S TEAM</h3>
             <div className='mt-1 flex items-start gap-2'>
               <LockIcon className='mt-[0.1rem] h-3 w-3 text-gray-500 dark:text-gray-400'/>
               <p className='text-xs text-gray-500'>Private</p>
@@ -127,7 +127,7 @@ const Sidebar = () => {
             {currentUserDetails?.username}
           </span>
           <button
-            className='self-start rounded bg-purple-600 px-4 py-2 text-xs font-bold text-white hover:bg-purple-700 md:block'
+            className='self-start rounded bg-purple-600 px-4 py-2 text-xs font-bold text-white hover:bg-purple-700 block md:block'
             onClick={handleSignOut}
             >
             Sign Out
@@ -157,7 +157,7 @@ const SidebarLink = ({ href, icon: Icon, label }: SidebarLinkProps) => {
         } justify-start px-8 py-3`}
       >
         {isActive && (
-          <div className="absolute left-0 top-0 h-[100%] w-[5px] bg-blue-200" />
+          <div className="absolute left-0 top-0 h-[100%] w-[5px] bg-purple-300" />
         )}
 
         <Icon className="h-6 w-6 text-gray-800 dark:text-gray-100" />
