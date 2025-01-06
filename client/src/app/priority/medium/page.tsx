@@ -1,12 +1,9 @@
-import React from 'react'
-import ReusablePriorityPage from '../reusablePriorityPAge'
-import { Priority } from '@/state/api'
+import React from "react";
+import ReusablePriorityPage from "../reusablePriorityPage";
+import { Priority } from "@/state/api";
 
-type Props = {}
+const Urgent = () => {
+  return <ReusablePriorityPage priority={Priority.Medium} />;
+};
 
-const Medium = (props: Props) => {
-  return ( <ReusablePriorityPage priority={Priority.Medium}/> )
-  
-}
-
-export default Medium
+export default Urgent;

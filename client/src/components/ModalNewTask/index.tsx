@@ -47,7 +47,7 @@ const ModalNewTask = ({ isOpen, onClose, id = null }: Props) => {
   };
 
   const isFormValid = () => {
-    return title && authorUserId && (id != null || projectId);
+    return title && authorUserId && (id !== null || projectId);
   };
 
   const selectStyles = 
@@ -129,15 +129,15 @@ const ModalNewTask = ({ isOpen, onClose, id = null }: Props) => {
           <input
                 type="text"
                 className={inputStyles}
-                value={authorUserId}
                 placeholder="Author User ID"
+                value={authorUserId}
                 onChange={(e) => setAuthorUserId(e.target.value)}
             />
             <input
                 type="text"
                 className={inputStyles}
-                value={assignedUserId}
                 placeholder="Assigned User ID"
+                value={assignedUserId}
                 onChange={(e) => setAssignedUserId(e.target.value)}
             />
             {
