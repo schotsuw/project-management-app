@@ -105,7 +105,7 @@ const ReusablePriorityPAge = ({ priority }: Props) => {
         name="Priority Page"
         buttonComponent={
           <button
-            className="mr-3 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+            className="mr-3 rounded bg-purple-600 px-4 py-2 font-bold text-white hover:bg-purple-700"
             onClick={() => setIsModalNewTaskOpen(true)}
           >
             Add Task
