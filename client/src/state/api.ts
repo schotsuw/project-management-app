@@ -73,7 +73,7 @@ export interface Team {
   productOwnerUserId?: number;
   projectManagerUserId?: number;
 }
-//fix this
+
 export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL,
