@@ -92,25 +92,12 @@ export const getUserTasks = async (
   res: Response
 ): Promise<void> => {
   const { userId } = req.params;
-  
-  // Add validation
-  if (!userId) {
-    res.status(400).json({ message: "userId is required" });
-    return;
-  }
-
-  const parsedUserId = Number(userId);
-  if (isNaN(parsedUserId)) {
-    res.status(400).json({ message: "Invalid userId format" });
-    return;
-  }
-
   try {
     const tasks = await prisma.task.findMany({
       where: {
         OR: [
-          { authorUserId: parsedUserId },
-          { assignedUserId: parsedUserId },
+          { authorUserId: Number(userId) },
+          { assignedUserId: Number(userId) },
         ],
       },
       include: {
